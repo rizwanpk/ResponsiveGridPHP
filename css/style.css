@@ -1,0 +1,152 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../css/LilitaOne-Regular.ttf);
+}
+
+body {
+    background: url(http://neithub.com/myfolio/img/dark-blackboard.png) fixed top;
+}
+.search-field {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('http://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.btn-control {
+    background-color: white;
+    margin-top: 10px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#rig {
+    max-width:1400px;
+    margin:1px auto;
+    padding:0;
+    font-size:0;
+    list-style:none;
+}
+
+#rig .grid-gallery {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:50%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.rig-cell {
+    display:block;
+    position: relative;
+    overflow:hidden;
+    cursor: pointer;
+}
+
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig .grid-gallery:hover .rig-img {
+    transform:scale(1.05);
+}
+
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    background: #b0def1;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);
+    transition:all 0.6s;
+}
+
+#rig .grid-gallery:hover .rig-overlay {
+    opacity:0.8;
+}
+
+.rig-text {
+    display: block;
+    padding: 0px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "myFirstFont", sans-serif;
+    font-weight: normal !important;
+    bottom: 0px;
+    color: white;
+    background: black;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translateY(-20px);
+    transition: all .3s;
+}
+
+#rig .grid-gallery:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #rig .grid-gallery {width:50%;}
+}
+
+@media (max-width: 800px) {
+    #rig .grid-gallery {width:50%;}
+    #rig .rig-text {
+        transform:translateY(0px);
+        opacity:0.9;
+    }
+}
+
+@media (max-width: 500px) {
+    #rig .grid-gallery {width:100%;}
+    #rig .rig-text {
+        transform:translateY(0px);
+        opacity:0.9;
+    }
+}
+
+@media (max-width: 400px) {
+    #rig .grid-gallery {width:100%;}
+    #rig .rig-text {
+        transform:translateY(0px);
+        opacity:0.9;
+    }
+}
